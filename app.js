@@ -1,4 +1,3 @@
-const sequelize = require("./database/config")
 const express = require("express")
 const app = express()
 
