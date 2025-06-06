@@ -1,4 +1,5 @@
 const express = require("express")
+require("./database/config")
 const app = express()
 
 app.use(express.json());
