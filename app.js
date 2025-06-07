@@ -9,14 +9,25 @@ app.set("view engine", "ejs")
 app.get("/",(req,res)=>{
     res.render("home",{title: "ejs", page: "home"})
 })
+
 app.get("/about",(req,res)=>{
     res.render("about",{title: "ejs", page: "about"})
 })
+
 app.get("/services",(req,res)=>{
     res.render("services",{title: "ejs", page: "services"})
 })
+
 app.get("/contact",(req,res)=>{
     res.render("contact",{title: "ejs", page: "contact"})
+})
+
+app.get("/login", (req,res)=>{
+    res.render("authentication/login")
+})
+
+app.get("/register", (req,res)=>{
+    res.render("authentication/register")
 })
 
 app.listen(4444, ()=>{
