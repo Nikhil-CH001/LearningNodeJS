@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,4 +9,118 @@
     <%- include("./partials/nav") %>
     <h1>This is <%- page %> page </h1>
 </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>My App</title>
+</head>
+
+<body class="w-full h-screen">
+    <%- include("./partials/nav") %>
+
+    <section
+        class="relative w-full min-h-[90vh] flex flex-col items-center justify-center text-center px-6 lg:px-16 py-16 md:py-32">
+        <!-- Background Image -->
+        <div class="absolute inset-0 bg-cover bg-center"
+            style="background-image: url('https://plus.unsplash.com/premium_photo-1695762436987-1cf827e5f1dd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTl8fGJ1cmdlcmFpfGVufDB8MHwwfHx8MA%3D%3D');">
+        </div>
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+
+        <!-- Content -->
+        <div class="relative z-10 text-white max-w-2xl">
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+                Welcome to Our Platform
+            </h1>
+            <p class="mt-4 text-lg md:text-xl">
+                Discover amazing features and join us today.
+            </p>
+            <div class="mt-6">
+                <a href="#"
+                    class="group px-6 py-3 bg-red-500 hover:bg-red-600 rounded-lg text-lg font-semibold transition inline-flex items-center">
+                    Get Started
+                    <i class="fa-solid fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="px-8 mt-8">
+       
+        <div class="w-full flex justify-between items-center">
+            <h1 class="text-start font-semibold text-xl md:text-2xl">Popular Dishes</h1>
+            <a href="#" class="px-6 py-3 text-red-500  font-semibold rounded-lg hover:text-red-600 transition">All</a>
+        </div>
+    
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-5">
+            <!-- CARD 1 -->
+            <div class="rounded-lg overflow-hidden border border-gray-300 shadow-lg flex flex-col bg-white">
+                <div class="relative">
+                    <img class="w-full h-56 object-cover"
+                        src="https://images.pexels.com/photos/61180/pexels-photo-61180.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                        alt="Simplest Salad Recipe">
+                    <div class="absolute inset-0 bg-black opacity-25 hover:opacity-0 transition"></div>
+                    <div class="text-xs absolute top-2 right-2 bg-red-500 px-3 py-1 text-white rounded-lg">#1</div>
+                </div>
+                <div class="px-6 py-4 flex-grow">
+                    <h2 class="font-semibold text-lg hover:text-red-600 transition">Simplest Salad Recipe</h2>
+                    <p class="text-gray-500 text-sm mt-1">A fresh and healthy salad recipe that's easy to prepare.</p>
+                </div>
+                <div class="px-6 py-3 flex justify-between bg-gray-100">
+                    <button class="px-4 py-2 text-red-500 border border-red-500 rounded-lg hover:bg-red-500 hover:text-white transition">View</button>
+                    <button class="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition">Add <i class="fa-solid fa-cart-plus"></i></button>
+                </div>
+            </div>
+    
+            <!-- CARD 2 -->
+            <div class="rounded-lg overflow-hidden shadow-lg border border-gray-300 flex flex-col bg-white">
+                <div class="relative">
+                    <img class="w-full h-56 object-cover"
+                        src="https://images.pexels.com/photos/1600727/pexels-photo-1600727.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                        alt="FastFood Ideas">
+                    <div class="absolute inset-0 bg-black opacity-25 hover:opacity-0 transition"></div>
+                    <div class="text-xs absolute top-2 right-2 bg-red-500 px-3 py-1 text-white rounded-lg">#2</div>
+                </div>
+                <div class="px-6 py-4 flex-grow">
+                    <h2 class="font-semibold text-lg hover:text-red-600 transition">Best FastFood Ideas</h2>
+                    <p class="text-gray-500 text-sm mt-1">Quick and delicious fast food ideas to try at home.</p>
+                </div>
+                <div class="px-6 py-3 flex justify-between bg-gray-100">
+                    <button class="px-4 py-2 text-red-500 border border-red-500 rounded-lg hover:bg-red-500 hover:text-white transition">View</button>
+                    <button class="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition">Add <i class="fa-solid fa-cart-plus"></i></button>
+                </div>
+            </div>
+    
+            <!-- CARD 3 -->
+            <div class="rounded-lg overflow-hidden shadow-lg border border-gray-300 flex flex-col bg-white">
+                <div class="relative">
+                    <img class="w-full h-56 object-cover"
+                        src="https://images.pexels.com/photos/6086/food-salad-healthy-vegetables.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                        alt="Why to eat salad?">
+                    <div class="absolute inset-0 bg-black opacity-25 hover:opacity-0 transition"></div>
+                    <div class="text-xs absolute top-2 right-2 bg-red-500 px-3 py-1 text-white rounded-lg">#3</div>
+                </div>
+                <div class="px-6 py-4 flex-grow">
+                    <h2 class="font-semibold text-lg hover:text-red-600 transition">Why to eat salad?</h2>
+                    <p class="text-gray-500 text-sm mt-1">The benefits of including fresh salads in your daily diet.</p>
+                </div>
+                <div class="px-6 py-3 flex justify-between bg-gray-100">
+                    <button class="px-4 py-2 text-red-500 border border-red-500 rounded-lg hover:bg-red-500 hover:text-white transition">View</button>
+                    <button class="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition">Add <i class="fa-solid fa-cart-plus"></i></button>
+                </div>
+            </div>
+        </div>
+    
+    
+    </section>
+    
+</body>
+
 </html>

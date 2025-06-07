@@ -1,13 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> <%- title %> </title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSB7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Our Services - My App</title>
 </head>
-<body>
+
+<body class="w-full h-screen">
     <%- include("./partials/nav") %>
-    <h1>This is <%- page %> page </h1>
-    
+
+    <section
+        class="relative w-full min-h-[90vh] flex flex-col items-center justify-center text-center px-6 lg:px-16 py-16 md:py-32">
+        <!-- Background Image -->
+        <div class="absolute inset-0 bg-cover bg-center"
+            style="background-image: url('https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');">
+        </div>
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+
+        <!-- Content -->
+        <div class="relative z-10 text-white max-w-2xl">
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+                Our Services
+            </h1>
+            <p class="mt-4 text-lg md:text-xl">
+                Explore the range of services we offer to make your dining experience exceptional.
+            </p>
+            <div class="mt-6">
+                <a href="#services"
+                    class="group px-6 py-3 bg-red-500 hover:bg-red-600 rounded-lg text-lg font-semibold transition inline-flex items-center">
+                    Discover More
+                    <i class="fa-solid fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="px-8 py-16 bg-gray-50">
+        <h1 class="text-3xl md:text-4xl font-bold text-center mb-8">What We Offer</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <!-- Service 1 -->
+            <div class="rounded-lg overflow-hidden border border-gray-300 shadow-lg flex flex-col bg-white">
+                <div class="relative">
+                    <img class="w-full h-56 object-cover"
+                        src="https://images.pexels.com/photos/704569/pexels-photo-704569.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                        alt="Food Delivery">
+                    <div class="absolute inset-0 bg-black opacity-25 hover:opacity-0 transition"></div>
+                </div>
+                <div class="px-6 py-4 flex-grow">
+                    <h2 class="font-semibold text-lg hover:text-red-600 transition">Food Delivery</h2>
+                    <p class="text-gray-600 text-sm mt-2">
+                        Enjoy fresh and delicious meals delivered straight to your door from local restaurants.
+                    </p>
+                </div>
+                <div class="px-6 py-3 bg-gray-100">
+                    <a href="#"
+                        class="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition inline-block">
+                        Order Now
+                    </a>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="rounded-lg overflow-hidden border border-gray-300 shadow-lg flex flex-col bg-white">
+                <div class="relative">
+                    <img class="w-full h-56 object-cover"
+                        src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                        alt="Room Service">
+                    <div class="absolute inset-0 bg-black opacity-25 hover:opacity-0 transition"></div>
+                </div>
+                <div class="px-6 py-4 flex-grow">
+                    <h2 class="font-semibold text-lg hover:text-red-600 transition">Room Service</h2>
+                    <p class="text-gray-600 text-sm mt-2">
+                        Experience gourmet dining in the comfort of your hotel room with our exclusive room service menu.
+                    </p>
+                </div>
+                <div class="px-6 py-3 bg-gray-100">
+                    <a href="#"
+                        class="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition inline-block">
+                        Order Room Service
+                    </a>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="rounded-lg overflow-hidden border border-gray-300 shadow-lg flex flex-col bg-white">
+                <div class="relative">
+                    <img class="w-full h-56 object-cover"
+                        src="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                        alt="Catering Services">
+                    <div class="absolute inset-0 bg-black opacity-25 hover:opacity-0 transition"></div>
+                </div>
+                <div class="px-6 py-4 flex-grow">
+                    <h2 class="font-semibold text-lg hover:text-red-600 transition">Catering Services</h2>
+                    <p class="text-gray-600 text-sm mt-2">
+                        Let us cater your events with customized menus that delight your guests.
+                    </p>
+                </div>
+                <div class="px-6 py-3 bg-gray-100">
+                    <a href="#"
+                        class="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition inline-block">
+                        Book Catering
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="px-8 py-16">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-3xl md:text-4xl font-bold mb-8">Why Choose Us?</h1>
+            <p class="text-gray-600 text-lg mb-6">
+                Our services are designed with you in mind. We partner with top local chefs and restaurants to bring you
+                fresh, high-quality meals. Whether you're looking for quick delivery, luxurious room service, or
+                professional catering, we’ve got you covered with convenience and quality.
+            </p>
+            <div class="mt-6">
+                <a href="#"
+                    class="group px-6 py-3 bg-red-500 hover:bg-red-600 rounded-lg text-lg font-semibold text-white transition inline-flex items-center">
+                    Get Started
+                    <i class="fa-solid fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
 </body>
+
 </html>

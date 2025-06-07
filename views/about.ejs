@@ -1,12 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> <%- title %> </title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSB7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>About Us - My App</title>
 </head>
-<body>
+
+<body class="w-full h-screen">
     <%- include("./partials/nav") %>
-    <h1>This is <%- page %> page </h1>
+
+    <section
+        class="relative w-full min-h-[90vh] flex flex-col items-center justify-center text-center px-6 lg:px-16 py-16 md:py-32">
+        <!-- Background Image -->
+        <div class="absolute inset-0 bg-cover bg-center"
+            style="background-image: url('https://images.pexels.com/photos/3186654/pexels-photo-3186654.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');">
+        </div>
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+
+        <!-- Content -->
+        <div class="relative z-10 text-white max-w-2xl">
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+                About Us
+            </h1>
+            <p class="mt-4 text-lg md:text-xl">
+                Learn more about our mission, vision, and the team behind our platform.
+            </p>
+            <div class="mt-6">
+                <a href="#our-story"
+                    class="group px-6 py-3 bg-red-500 hover:bg-red-600 rounded-lg text-lg font-semibold transition inline-flex items-center">
+                    Our Story
+                    <i class="fa-solid fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="our-story" class="px-8 py-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-3xl md:text-4xl font-bold text-center mb-8">Our Story</h1>
+            <p class="text-gray-600 text-lg mb-6">
+                Founded in 2020, our platform was created with a passion for connecting people with delicious and healthy
+                food options. Our mission is to make dining simple, accessible, and enjoyable for everyone. We believe in
+                the power of good food to bring people together and inspire healthier lifestyles.
+            </p>
+            <p class="text-gray-600 text-lg mb-6">
+                From humble beginnings, we’ve grown into a community-driven platform that partners with local chefs and
+                restaurants to deliver fresh, high-quality meals straight to your door. Our team is dedicated to innovation,
+                sustainability, and customer satisfaction.
+            </p>
+        </div>
+    </section>
+
+    <section class="px-8 py-16">
+        <h1 class="text-3xl md:text-4xl font-bold text-center mb-8">Meet Our Team</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <!-- Team Member 1 -->
+            <div class="rounded-lg overflow-hidden border border-gray-300 shadow-lg flex flex-col bg-white">
+                <div class="relative">
+                    <img class="w-full h-56 object-cover"
+                        src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                        alt="Team Member 1">
+                    <div class="absolute inset-0 bg-black opacity-25 hover:opacity-0 transition"></div>
+                </div>
+                <div class="px-6 py-4 flex-grow">
+                    <h2 class="font-semibold text-lg hover:text-red-600 transition">Jane Doe</h2>
+                    <p class="text-gray-500 text-sm mt-1">Founder & CEO</p>
+                    <p class="text-gray-600 text-sm mt-2">Jane leads our team with a vision for sustainable dining and a
+                        passion for culinary innovation.</p>
+                </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="rounded-lg overflow-hidden border border-gray-300 shadow-lg flex flex-col bg-white">
+                <div class="relative">
+                    <img class="w-full h-56 object-cover"
+                        src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                        alt="Team Member 2">
+                    <div class="absolute inset-0 bg-black opacity-25 hover:opacity-0 transition"></div>
+                </div>
+                <div class="px-6 py-4 flex-grow">
+                    <h2 class="font-semibold text-lg hover:text-red-600 transition">John Smith</h2>
+                    <p class="text-gray-500 text-sm mt-1">Head Chef</p>
+                    <p class="text-gray-600 text-sm mt-2">John brings his culinary expertise to curate the best dishes for
+                        our platform.</p>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="rounded-lg overflow-hidden border border-gray-300 shadow-lg flex flex-col bg-white">
+                <div class="relative">
+                    <img class="w-full h-56 object-cover"
+                        src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                        alt="Team Member 3">
+                    <div class="absolute inset-0 bg-black opacity-25 hover:opacity-0 transition"></div>
+                </div>
+                <div class="px-6 py-4 flex-grow">
+                    <h2 class="font-semibold text-lg hover:text-red-600 transition">Emily Johnson</h2>
+                    <p class="text-gray-500 text-sm mt-1">Marketing Director</p>
+                    <p class="text-gray-600 text-sm mt-2">Emily ensures our brand reaches food lovers everywhere with
+                        creative campaigns.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="px-8 py-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-3xl md:text-4xl font-bold mb-8">Our Mission</h1>
+            <p class="text-gray-600 text-lg mb-6">
+                Our mission is to make healthy, delicious food accessible to everyone while supporting local businesses and
+                promoting sustainable practices. Join us in our journey to transform the way people experience food!
+            </p>
+            <div class="mt-6">
+                <a href="#"
+                    class="group px-6 py-3 bg-red-500 hover:bg-red-600 rounded-lg text-lg font-semibold text-white transition inline-flex items-center">
+                    Join Us
+                    <i class="fa-solid fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
 </body>
+
 </html>

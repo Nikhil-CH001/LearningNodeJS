@@ -32,16 +32,18 @@ app.get("/register", (req,res)=>{
     res.render("authentication/register")
 })
 
-app.post("/register",async (req,res)=>{
-    const {username, email, password, confirm_password} = req.body
+app.post("/register", async (req, res) => {
+    const { username, email, password, confirm_password } = req.body;
+
     await db.users.create({
-        username : username,
-        email : email,
-        password : bcrypt.hashSync(password,10),
-    })
-        res.send("Registered Successfully")
-        res.redirect("/")
-})
+        username: username,
+        email: email,
+        password: bcrypt.hashSync(password, 10),
+    });
+
+    res.redirect("/");
+});
+
 
 app.listen(4444, ()=>{
     console.log("Server is running on http://localhost:4444")

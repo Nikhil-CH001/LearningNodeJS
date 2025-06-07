@@ -4,132 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Styled Navbar</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-
-        /* Navbar Styling */
-        .navbar {
-            background: linear-gradient(90deg, #1a1a1a, #2c3e50);
-            padding: 15px 30px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-        }
-
-        .navbar .nav-links {
-            list-style: none;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-        }
-
-        .navbar .nav-links li {
-            margin-left: 20px;
-        }
-
-        .navbar .nav-links a {
-            color: #ecf0f1;
-            text-decoration: none;
-            font-size: 16px;
-            padding: 10px 15px;
-            transition: all 0.3s ease;
-            border-radius: 5px;
-        }
-
-        .navbar .nav-links a:hover {
-            background-color: #3498db;
-            color: #fff;
-            transform: translateY(-2px);
-        }
-
-        .navbar .nav-links a.active {
-            background-color: #2ecc71;
-            color: #fff;
-        }
-
-        /* Hamburger Menu */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 5px;
-        }
-
-        .hamburger span {
-            width: 25px;
-            height: 3px;
-            background-color: #ecf0f1;
-            transition: all 0.3s ease;
-        }
-
-        /* Mobile Menu Styling */
-        @media screen and (max-width: 768px) {
-            .hamburger {
-                display: flex;
-            }
-
-            .navbar .nav-links {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                width: 100%;
-                background: #2c3e50;
-                padding: 20px 0;
-            }
-
-            .navbar .nav-links.active {
-                display: flex;
-            }
-
-            .navbar .nav-links li {
-                margin: 10px 0;
-                text-align: center;
-            }
-
-            .navbar .nav-links a {
-                font-size: 18px;
-                padding: 15px;
-                display: block;
-            }
-        }
-
-        /* Hamburger Animation */
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -7px);
-        }
-    </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+    <nav
+        class="absolute top-0 left-0 w-full h-20 bg-black backdrop-blur-md shadow-lg flex justify-between p-5 items-center z-50">
+        <div class="mr-5">
+           <h1 class="text-xl md:text-3xl text-white font-semibold">H.O.T.E.L</h1>
         </div>
-        <ul class="nav-links">
-            <li><a class="active" href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/login">Login</a></li>
-        </ul>
+
+        <div class="hidden lg:flex gap-20 justify-between items-center">
+            <ul class="flex gap-8">
+                <li class="text-md font-semibold text-white cursor-pointer"><a class="active" href="/">Home</a></li>
+                <li class="text-md font-semibold text-white cursor-pointer"><a href="/about">About</a></li>
+                <li class="text-md font-semibold text-white cursor-pointer"><a href="/services">Services</a></li>
+                <li class="text-md font-semibold text-white cursor-pointer"><a href="/contact">Contact</a></li>
+            </ul>
+            
+        </div>
+        <div class="hidden lg:flex flex gap-5">
+            <button
+                class="bg-red-500 text-white hover:bg-red-600 px-5 py-2 font-semibold rounded-lg cursor-pointer"><a href="/login">Login</a></button>
+            <button
+                class="border border-white text-white px-5 py-2 font-semibold rounded-lg cursor-pointer hover:opacity-80"><a href="/register">Register</a></button>
+        </div>
     </nav>
+    <!-- <ul class="nav-links">
+        <li><a class="active" href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/login">Login</a></li>
+    </ul> -->
 
     <script>
         // Toggle mobile menu
