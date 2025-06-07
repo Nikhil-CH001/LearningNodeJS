@@ -1,7 +1,9 @@
 const express = require("express")
-require("./database/config")
+const db = require("./database/config")
 const app = express()
+const bcrypt = require("bcrypt")
 
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.set("view engine", "ejs")
@@ -28,6 +30,17 @@ app.get("/login", (req,res)=>{
 
 app.get("/register", (req,res)=>{
     res.render("authentication/register")
+})
+
+app.post("/register",async (req,res)=>{
+    const {username, email, password, confirm_password} = req.body
+    await db.users.create({
+        username : username,
+        email : email,
+        password : bcrypt.hashSync(password,10),
+    })
+        res.send("Registered Successfully")
+        res.redirect("/")
 })
 
 app.listen(4444, ()=>{

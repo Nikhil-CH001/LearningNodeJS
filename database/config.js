@@ -20,9 +20,9 @@ const sequelize = new Sequelize({
 //     console.log("Database failed to connect")
 // ))
 const db = {}
-db.users = makeUserTable(sequelize,DataTypes)
-db.blogs = makeBlogTable(sequelize,DataTypes)
-db.products = makeProductTable(sequelize,DataTypes)
+db.users = require("../models/userModel")(sequelize,DataTypes)
+db.products = require("../models/productModel")(sequelize,DataTypes)
+db.blogs = require("../models/blogModel")(sequelize,DataTypes)
 
 async function testConnection(){
     try{
@@ -37,4 +37,4 @@ async function testConnection(){
 }
 testConnection()
 
-module.exports = sequelize
+module.exports = db
